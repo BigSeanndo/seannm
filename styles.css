@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #333;
+  --background-color: #1a1a1a;
+  --secondary-color: #fff;
+  --accent-color: #4d4d4d;
+  --complementary-color: #e6e6e6;
+  --light-background: #f2f2f2;
+  --dark-text: #2b2b2b;
+  --border-color: #ccc;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+h2,
+p,
+a,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#name {
+  font-size: 1.8em;
+  font-weight: 600;
+  font-family: 'Roboto Slab', serif;
+}
+
+#nav-links a {
+  text-decoration: none;
+  padding: 0 15px;
+  color: var(--secondary-color);
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  padding: 40px 10%;
+  background: var(--light-background);
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 50px;
+  background: var(--complementary-color);
+  color: var(--dark-text);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+	padding-left: 108px;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+	padding-left: 0;
+    justify-content: center; /* Center the content */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    margin-top: 2em; /* Adds some space above the container */
+}
+
+.about-text {
+	padding-left: 0;
+	margin-left: 0;
+    max-width: 600px; /* Sets a max-width for optimal line length */
+    margin-right: 20px; /* Adds margin between text and image */
+    text-align: left; /* Ensures text is left-aligned */
+    font-size: 1rem; /* Adjust as needed for readability */
+    line-height: 1.6; /* Adjust as needed for readability */
+}
+
+.about-image {
+  flex: 0 0 auto;
+}
+
+.professional-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0%;
+  margin-left: 40px;
+}
+
+#contact-form {
+  display: grid;
+  grid-gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+#contact-form input[type='text'],
+#contact-form input[type='email'],
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+#contact-form input[type='text']:focus,
+#contact-form input[type='email']:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+#contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: var(--dark-text);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 10%;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  border-top: 4px solid var(--border-color);
+}
+
+footer a,
+footer p {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  line-height: 2;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+#logo img {
+    height: auto; /* maintain aspect ratio */
+    width: 200px; /* or whatever width fits your design */
+    /* You may not need the following line if your logo is already sized appropriately */
+    max-width: 100%; /* ensures the image is responsive */
+}
