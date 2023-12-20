@@ -41,10 +41,10 @@ header {
   z-index: 1000;
 }
 
-#name {
-  font-size: 1.8em;
-  font-weight: 600;
-  font-family: 'Roboto Slab', serif;
+#logo img {
+  height: auto;
+  width: 200px;
+  max-width: 100%;
 }
 
 #nav-links a {
@@ -73,7 +73,7 @@ section {
 }
 
 h2 {
-	padding-left: 108px;
+  padding-left: 108px;
   font-family: 'Roboto Slab', serif;
   margin-bottom: 20px;
   font-size: 1.5em;
@@ -86,21 +86,18 @@ p {
 }
 
 .about-container {
-    display: flex;
-	padding-left: 0;
-    justify-content: center; /* Center the content */
-    align-items: flex-start; /* Align items to the start of the flex container */
-    margin-top: 2em; /* Adds some space above the container */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2em;
 }
 
 .about-text {
-	padding-left: 0;
-	margin-left: 0;
-    max-width: 600px; /* Sets a max-width for optimal line length */
-    margin-right: 20px; /* Adds margin between text and image */
-    text-align: left; /* Ensures text is left-aligned */
-    font-size: 1rem; /* Adjust as needed for readability */
-    line-height: 1.6; /* Adjust as needed for readability */
+  max-width: 600px;
+  margin-right: 20px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .about-image {
@@ -180,9 +177,65 @@ footer p {
   font-weight: 300;
 }
 
-#logo img {
-    height: auto; /* maintain aspect ratio */
-    width: 200px; /* or whatever width fits your design */
-    /* You may not need the following line if your logo is already sized appropriately */
-    max-width: 100%; /* ensures the image is responsive */
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-links {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    box-shadow: inset 0 -2px 0 var(--accent-color);
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text,
+  .about-image {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .professional-photo {
+    margin-left: 0; /* Centers the image on smaller screens */
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    padding-left: 20px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.2em;
+    padding-left: 15px;
+  }
+
+  #logo img {
+    width: 150px;
+  }
+
+  .about-text {
+    padding: 0;
+  }
 }
