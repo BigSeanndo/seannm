@@ -107,7 +107,7 @@ p {
 .professional-photo {
   max-width: 100%;
   height: auto;
-  border-radius: 0%;
+  border-radius: 4%;
   margin-left: 40px;
 }
 
